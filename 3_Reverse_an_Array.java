@@ -15,3 +15,4 @@ class Solution {
         reverseArray(arr);
         System.out.println(Arrays.toString(arr));
     }
+}
