@@ -16,6 +16,6 @@ class Solution {
             maxProduct = Math.max(maxProduct, maxEndingHere);
         }
         
-        
+        return maxProduct;
     }
 }
