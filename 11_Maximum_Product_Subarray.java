@@ -8,3 +8,5 @@ class Solution {
         int maxEndingHere = arr[0];
         int minEndingHere = arr[0];
         
+        for (int i = 1; i < n; i++) {
+            int temp = maxEndingHere; 
