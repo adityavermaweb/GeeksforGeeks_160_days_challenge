@@ -15,3 +15,13 @@ class Solution {
         
         return Math.max(maxSum, totalSum - minSum);
     }
+    private int kadane(int[] arr) {
+        int maxCurrent = arr[0];
+        int maxGlobal = arr[0];
+        
+        for (int i = 1; i < arr.length; i++) {
+            maxCurrent = Math.max(arr[i], maxCurrent + arr[i]);
+            maxGlobal = Math.max(maxGlobal, maxCurrent);
+        }
+        return maxGlobal;
+    }
