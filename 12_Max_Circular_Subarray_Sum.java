@@ -1,9 +1,6 @@
 // ----------------------------- MAX CIRCUALR SUBARRAY SUM ----------------------->
 class Solution {
 
-    // a: input array
-    // n: size of array
-    // Function to find maximum circular subarray sum.
     public int circularSubarraySum(int arr[]) {
 
         // Your code here
