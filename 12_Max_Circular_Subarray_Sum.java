@@ -25,3 +25,14 @@ class Solution {
         }
         return maxGlobal;
     }
+     private int kadaneMin(int[] arr) {
+        int minCurrent = arr[0];
+        int minGlobal = arr[0];
+        
+        for (int i = 1; i < arr.length; i++) {
+            minCurrent = Math.min(arr[i], minCurrent + arr[i]);
+            minGlobal = Math.min(minGlobal, minCurrent);
+        }
+        return minGlobal;
+    }
+}
