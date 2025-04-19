@@ -20,7 +20,7 @@ class Solution {
             result = result * 10 + digit;
             
             if (sign == 1 && result > Integer.MAX_VALUE) {
-                return Interger.MAX_VALUE;
+                return Integer.MAX_VALUE;
             }
             if(sign == -1 && -result < Integer.MIN_VALUE) {
                 return Integer.MIN_VALUE;
