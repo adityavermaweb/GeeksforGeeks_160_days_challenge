@@ -13,8 +13,8 @@ class Solution {
            int bit2 = j >= 0 ? s2.charAt(j) - '0' : 0;
             
            int sum = bit1 + bit2 + carry;
-            result.append(sum % 2);
-            carry = sum / 2;
+           result.append(sum % 2);
+           carry = sum / 2;
             
             i--;
             j--;
