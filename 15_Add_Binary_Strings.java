@@ -16,8 +16,8 @@ class Solution {
            result.append(sum % 2);
            carry = sum / 2;
             
-            i--;
-            j--;
+           i--;
+           j--;
         }
         
         String res = result.reverse().toString();
