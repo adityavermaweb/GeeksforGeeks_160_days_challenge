@@ -23,3 +23,32 @@ class Solution {
         }
         return lps;
     }
+    ArrayList<Integer> search(String pat, String txt) {
+        // your code here
+        ArrayList<Integer> result = new ArrayList<>();
+        int n = txt.length();
+        int m = pat.length();
+        
+        int[] lps = computeLPS(pat);
+        int i = 0;
+        int j = 0;
+        
+        while (i < n) {
+            if (txt.charAt(i) == pat.charAt(j)) {
+                i++;
+                j++;
+            }
+            if (j == m) {
+                result.add(i - j);
+                j = lps[j - 1];
+            } else if (i < n && txt.charAt(i) != pat.charAt(j)) {
+                if (j != 0) {
+                    j = lps[j - 1];
+                } else {
+                    i++;
+                }
+            }
+        }
+        return result;
+    }
+}
