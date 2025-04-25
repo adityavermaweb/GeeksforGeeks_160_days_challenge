@@ -9,3 +9,10 @@ class Solution {
         
         return s.length() - lps[combined.length() - 1];
     }
+    private static int[] computeLPS(String str) {
+        int n = str.length();
+        int[] lps = new int[n];
+        int len = 0;
+        
+        int i = 1;
+        while (i < n) {
