@@ -17,4 +17,11 @@ class Solution {
             } else if (arr[mid] == 1) {
                 mid++;
             } else {
-                
+            int temp = arr[high];
+                arr[high] = arr[mid];
+                arr[mid] = temp;
+                high--;
+            }
+        }
+    }
+}    
