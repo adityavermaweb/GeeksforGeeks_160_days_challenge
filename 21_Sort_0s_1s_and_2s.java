@@ -12,3 +12,9 @@ class Solution {
                 arr[mid] = temp;
                 low++;
                 mid++;
+                  } else if (arr[mid] == 1) {
+                mid++;
+            } else if (arr[mid] == 1) {
+                mid++;
+            } else {
+                
