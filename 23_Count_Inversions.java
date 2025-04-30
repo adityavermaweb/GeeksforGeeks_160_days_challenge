@@ -39,3 +39,6 @@ class Solution {
         }
         while (i < leftArr.length)
             arr[k++] = leftArr[i++];
+        return swaps;
+    }
+}
