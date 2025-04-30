@@ -17,3 +17,23 @@ class Solution {
         }
         return count;
     }
+
+    static int mergeAndCount(int[] arr, int left, int mid, int right) {
+        int[] leftArr = new int[mid - left + 1];
+        int[] rightArr = new int[right - mid];
+        
+        for (int i = 0; i < leftArr.length; i++)
+            leftArr[i] = arr[left + i];
+        for (int i = 0; i < rightArr.length; i++)
+            rightArr[i] = arr[mid + 1 + i];
+            
+        int i = 0, j = 0, k = left, swaps = 0;
+        
+        while (i < leftArr.length && j < rightArr.length) {
+            if (leftArr[i] <= rightArr[j]) {
+                arr[k++] = leftArr[i++];
+            } else {
+                arr[k++] = rightArr[j++];
+                swaps += (leftArr.length - i);
+            }
+        }
