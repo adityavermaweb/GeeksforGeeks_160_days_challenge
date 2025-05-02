@@ -8,3 +8,13 @@ class Solution {
         Arrays.sort(arr, (a, b) -> Integer.compare(a[0], b[0]));
         int[] current = arr[0];
         result.add(current);
+
+        for (int[] interval : arr) {
+            int currentEnd = current[1];
+            int nextStart = interval[0];
+            int nextEnd = interval[1];
+            
+            if (nextStart <= currentEnd) {
+                
+                current[1] =Math.max(currentEnd, nextEnd);
+            } else {
