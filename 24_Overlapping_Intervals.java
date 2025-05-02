@@ -17,4 +17,10 @@ class Solution {
             if (nextStart <= currentEnd) {
                 
                 current[1] =Math.max(currentEnd, nextEnd);
-            } else {
+            } else { current = interval;
+                result.add(current);
+            }
+        }
+        return result;
+    }
+}
