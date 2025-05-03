@@ -16,3 +16,14 @@ class Solution {
             newInterval[1] = Math.max(newInterval[1], intervals[i][0]);
             i++;
         }
+        result.add(newInterval);
+        
+        while (i < n) {
+            result.add(intervals[i]);
+            i++;
+        }
+        
+        return result;
+        
+    }
+}
