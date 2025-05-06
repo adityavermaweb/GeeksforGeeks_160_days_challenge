@@ -32,3 +32,8 @@ class Solution {
     private int getValue(int[] a, int[] b, int idx, int n) {
         return idx < n ? a[idx] : b[idx - n];
     }
+    private void setValue(int[] a, int[] b, int idx, int value, int n) {
+        if (idx < n) a[idx] = value;
+        else b[idx - n] = value;
+    }
+}
