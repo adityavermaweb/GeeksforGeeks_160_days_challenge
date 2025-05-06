@@ -22,3 +22,10 @@ class Solution {
                i++;
                j++;
             }
+            gap = nextGap(gap);
+        }
+    }
+    private int nextGap(int gap) {
+        if (gap <= 1) return 0;
+        return (gap / 2) + (gap % 2);
+    }
