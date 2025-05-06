@@ -29,3 +29,6 @@ class Solution {
         if (gap <= 1) return 0;
         return (gap / 2) + (gap % 2);
     }
+    private int getValue(int[] a, int[] b, int idx, int n) {
+        return idx < n ? a[idx] : b[idx - n];
+    }
