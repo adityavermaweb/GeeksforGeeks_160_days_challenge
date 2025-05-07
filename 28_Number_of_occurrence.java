@@ -22,3 +22,10 @@ class Solution {
         }
         return result;
     }
+    private int findLast(int[] arr, int target) {
+        int low = 0, high = arr.length - 1, result = -1;
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            if (arr[mid] == target) {
+                result = mid;
+                low = mid + 1;
