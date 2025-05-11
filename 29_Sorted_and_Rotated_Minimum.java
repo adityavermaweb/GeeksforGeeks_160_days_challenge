@@ -11,3 +11,6 @@ class Solution {
             } else {
                 high = mid;
             }
+            return arr[low];
+    }
+}
