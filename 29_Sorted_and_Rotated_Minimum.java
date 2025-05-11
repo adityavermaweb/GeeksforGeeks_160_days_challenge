@@ -1,1 +1,7 @@
 // -----------------------Sorted and Rotated Minimum--------------------------->
+class Solution {
+    public int findMin(int[] arr) {
+        // complete the function here
+        int low = 0, high = arr.length - 1;
+        while (low < high) {
+            int mid = low + (high - low) / 2;
