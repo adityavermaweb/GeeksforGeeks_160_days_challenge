@@ -7,3 +7,13 @@ class Solution {
 
         while (low <= high) {
             int mid = low + (high - low) / 2;
+            
+            if (arr[mid] == key) return mid;
+            
+            if (arr[low] <= arr[mid]) {
+                if (key >= arr[low] && key < arr[mid]) {
+                    high = mid - 1;
+                } else {
+                    low = mid + 1;
+                }
+            }
