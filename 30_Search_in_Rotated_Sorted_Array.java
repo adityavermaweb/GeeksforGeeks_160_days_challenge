@@ -17,3 +17,14 @@ class Solution {
                     low = mid + 1;
                 }
             }
+            else {
+                if (key > arr[mid] && key <= arr[high]) {
+                    low = mid + 1;
+                } else {
+                    high = mid -1;
+                }
+            }
+        }
+        return -1;
+    }
+}
