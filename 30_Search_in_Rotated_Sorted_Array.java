@@ -4,3 +4,6 @@ class Solution {
         // Complete this function
         int n = arr.length;
         int low = 0, high = n - 1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
