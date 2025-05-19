@@ -28,3 +28,8 @@ class Solution {
             } else {
                 low = cut1 + 1;
             }
+        }
+        return 1;
+         
+    }
+}
