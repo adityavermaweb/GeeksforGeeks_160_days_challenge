@@ -20,3 +20,11 @@ class Solution {
             int l2 = (cut2 == 0) ? Integer.MIN_VALUE : b[cut2 - 1];
             int r1 = (cut1 == n) ? Integer.MAX_VALUE : a[cut1];
             int r2 = (cut2 == m) ? Integer.MAX_VALUE : b[cut2];
+
+            if (l1 <= r2 && l2 <= r1) {
+                return Math.max(l1, l2);
+            } else if (l1 > r2) {
+                high = cut1 - 1;
+            } else {
+                low = cut1 + 1;
+            }
