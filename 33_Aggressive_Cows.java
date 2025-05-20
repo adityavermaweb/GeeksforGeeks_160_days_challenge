@@ -22,3 +22,14 @@ class Solution {
     private static boolean canPlaceCows(int[] stalls, int k, int distance) {
        int count = 1;
        int lastPosition = stalls[0];
+       
+       for(int i = 1; i < stalls.length; i++) {
+            if (stalls[i] - lastPosition >= distance) {
+                count++;
+                lastPosition = stalls[i];
+                if (count == k) return true;
+            }
+        }
+        return false;
+    }
+}
