@@ -19,3 +19,6 @@ class Solution {
         }
         return ans;
     }
+    private static boolean canPlaceCows(int[] stalls, int k, int distance) {
+       int count = 1;
+       int lastPosition = stalls[0];
