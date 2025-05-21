@@ -21,3 +21,19 @@ class Solution {
         }
         return result;
     }
+    private static boolean isFeasible(int[] arr, int k, int limit) {
+        int studentsRequired = 1;
+        int currentSum = 0;
+        
+        for (int pages : arr) {
+            if (currentSum + pages > limit) {
+                studentsRequired++;
+                currentSum = pages;
+                if (studentsRequired > k) return false;
+            } else {
+                currentSum += pages;
+            }
+        }
+        return true;
+    }
+}
