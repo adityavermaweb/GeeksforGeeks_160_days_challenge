@@ -14,3 +14,9 @@ class Solution {
                 if (missingCount == k) {
                    return current;
                 } 
+            }
+            current++;
+        }
+        return -1;
+    }
+}
