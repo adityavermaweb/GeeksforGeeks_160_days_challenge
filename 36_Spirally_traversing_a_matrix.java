@@ -17,3 +17,14 @@ class Solution {
                 result.add(mat[top][i]);
             }
             top++;
+
+            for (int i = top; i <= bottom; i++) {
+                result.add(mat[i][right]);
+            }
+            right--;
+            
+            if (top <= bottom) {
+                for (int i = right; i >= left; i--) {
+                    result.add(mat[bottom][i]);
+                }
+                bottom--;
