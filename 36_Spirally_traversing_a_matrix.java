@@ -28,3 +28,14 @@ class Solution {
                     result.add(mat[bottom][i]);
                 }
                 bottom--;
+            }
+            if (left <= right) {
+                for (int i = bottom; i >= top; i--) {
+                    result.add(mat[i][left]);
+                }
+                left++;
+            }
+        }
+        return result;
+    }
+}
